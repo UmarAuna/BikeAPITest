@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="5dp"
+        app:cardElevation="5dp"
+        android:layout_margin="5dp"
+        app:cardMaxElevation="5dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/login_text_view"
+            app:layout_constraintTop_toBottomOf="@+id/login_text_view"
+            tools:padding="14dp">
+
+            <ImageView
+                android:id="@+id/bike_image_view"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginStart="55dp"
+                android:layout_marginTop="22dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_bike"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/distance_text_view" />
+
+            <ImageView
+                android:id="@+id/lock_image_view"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:layout_marginEnd="55dp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_lock"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/bike_image_view" />
+
+            <TextView
+                android:id="@+id/places_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="sans-serif"
+                android:lineSpacingExtra="8sp"
+                android:singleLine="true"
+                android:textColor="#3F3F3F"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="047 Ofiar Dabia" />
+
+            <TextView
+                android:id="@+id/distance_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-light"
+                android:lineSpacingExtra="2sp"
+                android:textColor="#3F3F3F"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/places_text_view"
+                tools:ignore="SmallSp"
+                tools:text="600m - Bike Station" />
+
+            <TextView
+                android:id="@+id/available_bike_place_holder_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-light"
+                android:lineSpacingExtra="2sp"
+                android:text="Available bikes"
+                android:textColor="#3F3F3F"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/bike_image_view"
+                app:layout_constraintStart_toStartOf="@+id/bike_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/bike_image_view"
+                tools:ignore="SmallSp" />
+
+            <TextView
+                android:id="@+id/available_bike_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:lineSpacingExtra="2sp"
+                android:textColor="#65D197"
+                android:textSize="45sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/available_bike_place_holder_text_view"
+                app:layout_constraintStart_toStartOf="@+id/available_bike_place_holder_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/available_bike_place_holder_text_view"
+                tools:ignore="SmallSp"
+                tools:text="72" />
+
+            <TextView
+                android:id="@+id/available_place_place_holder_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif-light"
+                android:lineSpacingExtra="2sp"
+                android:text="Available places"
+                android:textColor="#3F3F3F"
+                android:textSize="13sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/lock_image_view"
+                app:layout_constraintStart_toStartOf="@+id/lock_image_view"
+                app:layout_constraintTop_toBottomOf="@+id/lock_image_view"
+                tools:ignore="SmallSp" />
+
+
+            <TextView
+                android:id="@+id/available_place_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-black"
+                android:lineSpacingExtra="2sp"
+                android:textColor="#3F3F3F"
+                android:textSize="45sp"
+                android:textStyle="normal"
+                app:layout_constraintEnd_toEndOf="@+id/available_place_place_holder_text_view"
+                app:layout_constraintStart_toStartOf="@+id/available_place_place_holder_text_view"
+                app:layout_constraintTop_toBottomOf="@+id/available_place_place_holder_text_view"
+                tools:ignore="SmallSp"
+                tools:text="72" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
